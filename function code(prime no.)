@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+int prime(int num);
+int main()
+{
+    int num,flag=0;
+    cout<<"Enter a positive integer : ";
+    cin>>num;
+    for(int j=2;j<=num/2;j++){
+        if(prime(j)==1){
+            if(prime(num-j)==1)
+            {
+                cout<<num<<" = "<<j<<" + "<<num-j<<"\n";
+                flag=1;
+            }}}
+    if (flag==0){
+        cout<<"cannot be expressed as the sum of two prime numbers\n";
+    }
+
+
+}
+int prime(int num)
+{   int isprime=1;
+    for(int i=2;i<=num/2;i++)
+        if (num%i==0){
+            isprime=0;
+            break;
+        }{
+        return isprime;
+        }
